@@ -21,6 +21,10 @@
       "dom"
     ],
     "paths": {
+      "vx-material": [
+        "dist/vx-material/vx-material",
+        "dist/vx-material"
+      ]
       
     }
   },
