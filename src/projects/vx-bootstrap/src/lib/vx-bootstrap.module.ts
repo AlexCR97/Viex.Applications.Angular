@@ -19,6 +19,7 @@ import { VxCardComponent } from './components/VxCard/vx-card.component';
   ],
   exports: [
     VxButtonComponent,
+    VxCardComponent,
     VxIconComponent,
     VxSpinnerComponent,
     VxFlexComponent,
