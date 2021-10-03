@@ -5,11 +5,13 @@ import { VxBootstrapModule } from 'projects/vx-bootstrap/src/public-api';
 
 import { AppComponent } from './app.component';
 import { ButtonsPageComponent } from './pages/ButtonsPage/buttons-page.component';
+import { CardsPageComponent } from './pages/CardsPage/cards-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ButtonsPageComponent
+    ButtonsPageComponent,
+    CardsPageComponent
   ],
   imports: [
     BrowserModule,

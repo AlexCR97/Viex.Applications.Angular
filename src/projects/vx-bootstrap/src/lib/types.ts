@@ -15,3 +15,7 @@ export type VxComponentSize = 'sm' | 'md' | 'lg'
 export type VxHorizontalPlacement = 'start' | 'end'
 
 export type VxSpinnerAnimation = 'border' | 'grow'
+
+export type VxJustifyConent = 'around' | 'between' | 'center' | 'end' | 'start'
+
+export type VxAlignItems = 'baseline' | 'center' | 'end' | 'start' | 'stretch'
