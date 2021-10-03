@@ -5,6 +5,8 @@ import { VxSpinnerComponent } from './components/VxSpinner/vx-spinner.component'
 import { VxIconComponent } from './components/VxIcon/vx-icon.component';
 import { VxFlexComponent } from './components/VxFlex/vx-flex.component';
 import { VxCardComponent } from './components/VxCard/vx-card.component';
+import { VxMenuComponent } from './components/VxMenu/vx-menu.component';
+import { VxIconButtonComponent } from './components/VxIconButton/vx-icon-button.component';
 
 @NgModule({
   declarations: [
@@ -13,6 +15,8 @@ import { VxCardComponent } from './components/VxCard/vx-card.component';
     VxSpinnerComponent,
     VxFlexComponent,
     VxCardComponent,
+    VxMenuComponent,
+    VxIconButtonComponent,
   ],
   imports: [
     BrowserModule,
@@ -23,6 +27,8 @@ import { VxCardComponent } from './components/VxCard/vx-card.component';
     VxIconComponent,
     VxSpinnerComponent,
     VxFlexComponent,
+    VxMenuComponent,
+    VxIconButtonComponent,
   ]
 })
 export class VxBootstrapModule { }

@@ -4,16 +4,16 @@ import { VxComponentSize } from '../../types';
 const template = /*html*/`
 <div class="card" [ngClass]="cardClass">
 
-  <div #cardHeaderContainer [ngClass]="cardHeaderClass">
-    <ng-content select="[vxCardHeader]"></ng-content>
+  <div #headerContainer [ngClass]="cardHeaderClass">
+    <ng-content select="[header]"></ng-content>
   </div>
 
-  <div #cardBodyContainer [ngClass]="cardBodyClass">
-    <ng-content select="[vxCardBody]"></ng-content>
+  <div #bodyContainer [ngClass]="cardBodyClass">
+    <ng-content select="[body]"></ng-content>
   </div>
   
-  <div #cardFooterContainer [ngClass]="cardFooterClass">
-    <ng-content select="[vxCardFooter]"></ng-content>
+  <div #footerContainer [ngClass]="cardFooterClass">
+    <ng-content select="[footer]"></ng-content>
   </div>
 
   <ng-content></ng-content>
@@ -27,14 +27,14 @@ const template = /*html*/`
 })
 export class VxCardComponent implements OnInit {
 
-  @ViewChild('cardHeaderContainer', { static: true })
-  cardHeaderContainer!: ElementRef<HTMLDivElement>;
+  @ViewChild('headerContainer', { static: true })
+  headerContainer!: ElementRef<HTMLDivElement>;
 
-  @ViewChild('cardBodyContainer', { static: true })
-  cardBodyContainer!: ElementRef<HTMLDivElement>;
+  @ViewChild('bodyContainer', { static: true })
+  bodyContainer!: ElementRef<HTMLDivElement>;
 
-  @ViewChild('cardFooterContainer', { static: true })
-  cardFooterContainer!: ElementRef<HTMLDivElement>;
+  @ViewChild('footerContainer', { static: true })
+  footerContainer!: ElementRef<HTMLDivElement>;
 
   @Input() shadow: VxComponentSize | undefined
 
@@ -56,7 +56,7 @@ export class VxCardComponent implements OnInit {
   }
   
   get cardHeaderClass() {
-    const hasContent = this.hasInnerContent(this.cardHeaderContainer)
+    const hasContent = this.hasInnerContent(this.headerContainer)
     
     return {
       'card-header': hasContent,
@@ -65,7 +65,7 @@ export class VxCardComponent implements OnInit {
   }
 
   get cardBodyClass() {
-    const hasContent = this.hasInnerContent(this.cardBodyContainer)
+    const hasContent = this.hasInnerContent(this.bodyContainer)
 
     return {
       'card-body': hasContent,
@@ -74,7 +74,7 @@ export class VxCardComponent implements OnInit {
   }
 
   get cardFooterClass() {
-    const hasContent = this.hasInnerContent(this.cardFooterContainer)
+    const hasContent = this.hasInnerContent(this.footerContainer)
 
     return {
       'card-footer': hasContent,

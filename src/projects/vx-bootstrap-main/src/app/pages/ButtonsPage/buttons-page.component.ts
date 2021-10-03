@@ -14,7 +14,7 @@ const template = /*html*/`
       <div class="card-body">
         <vx-flex>
           <div *ngFor="let item of buttonVariants" class="mx-1">
-            <vx-button  [label]="item" [variant]="item"></vx-button>
+            <vx-button [label]="item" [variant]="item"></vx-button>
           </div>
         </vx-flex>
       </div>
@@ -135,7 +135,6 @@ const template = /*html*/`
   ]
 })
 export class ButtonsPageComponent implements OnInit {
-
 
   buttonVariants: VxButtonVariant[] = [ 'primary', 'secondary', 'success', 'danger', 'warning', 'info', 'light', 'dark', 'link' ]
 

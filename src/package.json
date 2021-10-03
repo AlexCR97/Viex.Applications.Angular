@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "gc:vxb-main": "ng generate component --flat --inline-style --inline-template --skip-tests --project=vx-bootstrap-main",
-    "gc:vxb": "ng generate component --flat --inline-style --inline-template --skip-tests --project=vx-bootstrap-main",
+    "gc:vxb": "ng generate component --flat --inline-style --inline-template --skip-tests --project=vx-bootstrap",
     "serve:vx-bootstrap": "ng serve vx-bootstrap-main",
     "watch:vx-bootstrap": "ng build vx-bootstrap"
   },
@@ -22,6 +22,7 @@
     "@popperjs/core": "^2.10.2",
     "bootstrap": "^5.1.1",
     "bootstrap-icons": "^1.5.0",
+    "jquery": "^3.6.0",
     "rxjs": "~6.6.0",
     "tslib": "^2.2.0",
     "zone.js": "~0.11.4"
