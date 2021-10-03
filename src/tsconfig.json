@@ -21,6 +21,10 @@
       "dom"
     ],
     "paths": {
+      "vx-bootstrap": [
+        "dist/vx-bootstrap/vx-bootstrap",
+        "dist/vx-bootstrap"
+      ]
       
     }
   },

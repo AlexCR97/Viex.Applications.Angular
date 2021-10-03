@@ -9,6 +9,7 @@
 
 # dependencies
 /node_modules
+/projects/vx-bootstrap/node_modules
 
 # profiling files
 chrome-profiler-events*.json
