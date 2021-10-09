@@ -37,6 +37,8 @@ export class VxNotificationService {
   private setOptions(instance: VxNotificationComponent, options: VxNotificationOptions) {
     if (options.autohide)
       instance.autohide = options.autohide
+    else
+      instance.autohide = true
 
     if (options.color)
       instance.color = options.color
@@ -54,6 +56,7 @@ export class VxNotificationService {
     if (container == null)
       return
     
+
     let classes: string[] = [ 'position-fixed', 'p-3' ]
 
     if (options.position && VxNotificationPostionClasses.has(options.position)) {
@@ -61,7 +64,13 @@ export class VxNotificationService {
       classes = [ ...classes, ...postionClasses ]
     } else
       classes = [ ...classes, ...DefaultVxNotificationPositionClasses ]
+
     
+    for (let i = 0; i < container.classList.length; i++) {
+      const clazz = container.classList.item(i) as string
+      container.classList.remove(clazz)
+    }
+      
     classes.forEach(clazz => container.classList.add(clazz))
   }
 }
@@ -71,7 +80,7 @@ const DefaultVxNotificationPositionClasses = [ 'top-0', 'end-0' ]
 const VxNotificationPostionClasses = new Map<VxFixedPosition | undefined, string[]>([
   [ 'bottomCenter', [ 'bottom-0', 'start-50', 'translate-middle-x' ]],
   [ 'bottomLeft', [ 'bottom-0', 'start-0' ]],
-  [ 'bottomRight', [ 'bottom-0', 'end-50' ]],
+  [ 'bottomRight', [ 'bottom-0', 'end-0' ]],
   [ 'center', [ 'top-50', 'start-50', 'translate-middle' ]],
   [ 'centerLeft', [ 'top-50', 'start-0', 'translate-middle-y' ]],
   [ 'centerRight', [ 'top-50', 'end-0', 'translate-middle-y' ]],

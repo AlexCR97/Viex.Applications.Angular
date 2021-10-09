@@ -1,10 +1,11 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { VxButtonVariant, VxComponentSize, VxHorizontalPlacement, VxSpinnerAnimation } from '../../types';
 
 const template = /*html*/`
 <button
   [disabled]="disabled"
-  [ngClass]="buttonClass">
+  [ngClass]="buttonClass"
+  (click)="onClicked()">
 
   <span *ngIf="hasIcon && !loading && isIconPlacementStart" class="me-2">
     <vx-icon [icon]="icon"></vx-icon>
@@ -44,6 +45,8 @@ export class VxButtonComponent implements OnInit {
   @Input() size: VxComponentSize = 'md'
   @Input() variant: VxButtonVariant | undefined
 
+  @Output() clicked = new EventEmitter<void>()
+
   constructor() { }
 
   ngOnInit(): void {
@@ -78,6 +81,10 @@ export class VxButtonComponent implements OnInit {
 
   get isLoadingPlacementStart() {
     return this.loadingPlacement == 'start'
+  }
+
+  onClicked() {
+    this.clicked.emit()
   }
 
 }
