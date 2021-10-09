@@ -46,8 +46,6 @@ export class VxMenuComponent implements AfterViewInit {
     if (!dropdownElement)
       throw 'Could not initialize VxMenu because no Bootstrap Dropdown was found'
 
-    console.log("dropdownElement:", dropdownElement);
-
     this.dropdown = new Dropdown(dropdownElement)
   }
 

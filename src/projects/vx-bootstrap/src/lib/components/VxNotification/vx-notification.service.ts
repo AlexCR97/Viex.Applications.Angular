@@ -6,4 +6,8 @@ import { Injectable } from '@angular/core';
 export class VxNotificationService {
 
   constructor() { }
+
+  show() {
+    console.log("show!");
+  }
 }

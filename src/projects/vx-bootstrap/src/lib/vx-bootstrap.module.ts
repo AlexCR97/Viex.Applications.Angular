@@ -9,6 +9,7 @@ import { VxMenuComponent } from './components/VxMenu/vx-menu.component';
 import { VxIconButtonComponent } from './components/VxIconButton/vx-icon-button.component';
 import { VxTooltipComponent } from './components/VxTooltip/vx-tooltip.component';
 import { VxNotificationComponent } from './components/VxNotification/vx-notification.component';
+import { VxNotificationService } from './components/VxNotification/vx-notification.service';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,9 @@ import { VxNotificationComponent } from './components/VxNotification/vx-notifica
     VxIconButtonComponent,
     VxTooltipComponent,
     VxNotificationComponent,
+  ],
+  providers: [
+    VxNotificationService,
   ]
 })
 export class VxBootstrapModule { }

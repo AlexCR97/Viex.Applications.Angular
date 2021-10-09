@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { VxNotificationService } from 'projects/vx-bootstrap/src/lib/components/VxNotification/vx-notification.service';
 import { VxColorVariant } from 'projects/vx-bootstrap/src/lib/types';
 
 const template = /*html*/`
@@ -45,6 +46,15 @@ const template = /*html*/`
     </vx-card>
   </div>
 
+  <div class="mb-5">
+    <h6>Show Notifications Programatically</h6>
+    <vx-card>
+      <div body>
+        <vx-button label="Click here to show a notification" [outlined]="true" variant="secondary" (click)="onShowNotificationClicked()"></vx-button>
+      </div>
+    </vx-card>
+  </div>
+
 </div>
 `
 
@@ -56,9 +66,15 @@ export class NotificationsPageComponent implements OnInit {
 
   colorVariants: VxColorVariant[] = [ 'primary', 'secondary', 'success', 'danger', 'warning', 'info', 'light', 'dark' ]
 
-  constructor() { }
+  constructor(
+    private vxNotifications: VxNotificationService,
+  ) { }
 
   ngOnInit(): void {
+  }
+
+  onShowNotificationClicked() {
+    this.vxNotifications.show()
   }
 
 }
