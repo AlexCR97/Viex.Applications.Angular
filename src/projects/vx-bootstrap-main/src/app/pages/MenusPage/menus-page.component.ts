@@ -5,6 +5,10 @@ import { VxButtonVariant } from 'projects/vx-bootstrap/src/lib/types';
 const template = /*html*/`
 <div class="container pb-5">
 
+  <h2>Menus</h2>
+  <hr>
+  <div class="mb-5"></div>
+
   <div class="mb-5">
     <h6>Simple Menu</h6>
     <vx-card>
@@ -21,6 +25,7 @@ const template = /*html*/`
     <h6>Menu Shadows</h6>
     <vx-card>
       <div body>
+        <p>Click the buttons below to view the menu shadows</p>
         <vx-flex>
           <div class="mx-2">
             <vx-menu [menuItems]="noShadowMenuItems" [shadow]="undefined">
