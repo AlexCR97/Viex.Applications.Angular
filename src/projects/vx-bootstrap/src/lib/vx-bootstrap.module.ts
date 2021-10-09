@@ -8,6 +8,7 @@ import { VxCardComponent } from './components/VxCard/vx-card.component';
 import { VxMenuComponent } from './components/VxMenu/vx-menu.component';
 import { VxIconButtonComponent } from './components/VxIconButton/vx-icon-button.component';
 import { VxTooltipComponent } from './components/VxTooltip/vx-tooltip.component';
+import { VxNotificationComponent } from './components/VxNotification/vx-notification.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { VxTooltipComponent } from './components/VxTooltip/vx-tooltip.component'
     VxMenuComponent,
     VxIconButtonComponent,
     VxTooltipComponent,
+    VxNotificationComponent,
   ],
   imports: [
     BrowserModule,
@@ -32,6 +34,7 @@ import { VxTooltipComponent } from './components/VxTooltip/vx-tooltip.component'
     VxMenuComponent,
     VxIconButtonComponent,
     VxTooltipComponent,
+    VxNotificationComponent,
   ]
 })
 export class VxBootstrapModule { }

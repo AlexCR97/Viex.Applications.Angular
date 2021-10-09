@@ -1,10 +1,12 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { AfterViewInit, Component, Input, OnInit } from '@angular/core';
+import { Dropdown } from 'bootstrap';
 import { VxComponentSize } from '../../types';
+import random from '../../utils/random';
 import { VxMenuItem } from './VxMenuItem';
 
 const template = /*html*/`
 <div class="dropdown">
-  <span data-bs-toggle="dropdown">
+  <span [id]="vxMenuId" data-bs-toggle="dropdown" (click)="onMenuTriggerClicked()">
     <ng-content></ng-content>
   </span>
   <ul class="dropdown-menu" [ngClass]="menuItemClass">
@@ -27,14 +29,27 @@ const template = /*html*/`
   selector: 'vx-menu',
   template,
 })
-export class VxMenuComponent implements OnInit {
+export class VxMenuComponent implements AfterViewInit {
 
   @Input() menuItems: VxMenuItem[] = []
   @Input() shadow: VxComponentSize | undefined = 'sm'
   
+  vxMenuId = random.newGuid()
+
+  private dropdown!: Dropdown;
+
   constructor() { }
 
-  ngOnInit(): void { }
+  ngAfterViewInit(): void {
+    const dropdownElement = document.getElementById(this.vxMenuId)
+
+    if (!dropdownElement)
+      throw 'Could not initialize VxMenu because no Bootstrap Dropdown was found'
+
+    console.log("dropdownElement:", dropdownElement);
+
+    this.dropdown = new Dropdown(dropdownElement)
+  }
 
   get menuItemClass() {
     const classes: string[] = []
@@ -63,6 +78,10 @@ export class VxMenuComponent implements OnInit {
   onMenuItemClicked(item: VxMenuItem) {
     if (item.action)
       item.action()
+  }
+
+  onMenuTriggerClicked() {
+    this.dropdown.show()
   }
 
 }

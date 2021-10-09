@@ -8,6 +8,7 @@ import { ButtonsPageComponent } from './pages/ButtonsPage/buttons-page.component
 import { CardsPageComponent } from './pages/CardsPage/cards-page.component';
 import { MenusPageComponent } from './pages/MenusPage/menus-page.component';
 import { TooltipsPageComponent } from './pages/TooltipsPage/tooltips.component';
+import { NotificationsPageComponent } from './pages/NotificationsPage/notifications-page.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { TooltipsPageComponent } from './pages/TooltipsPage/tooltips.component';
     CardsPageComponent,
     MenusPageComponent,
     TooltipsPageComponent,
+    NotificationsPageComponent,
   ],
   imports: [
     BrowserModule,

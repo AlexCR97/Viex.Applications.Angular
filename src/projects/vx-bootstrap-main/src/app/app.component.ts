@@ -4,7 +4,7 @@ import { StaticRoutes } from './app-routing.routes';
 const template = /*html*/`
 <div class="container my-5">
 
-  <h1 class="text-center">Vx Bootstrap</h1>
+  <h1 class="text-center mb-4">Vx Bootstrap</h1>
 
   <div class="mb-4">
     <vx-flex>
@@ -29,6 +29,7 @@ export class AppComponent {
     StaticRoutes.buttons,
     StaticRoutes.cards,
     StaticRoutes.menus,
+    StaticRoutes.notifications,
     StaticRoutes.tooltips,
   ]
 

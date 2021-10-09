@@ -62,6 +62,7 @@ const template = /*html*/`
 
 </div>
 `
+
 @Component({
   selector: 'app-tooltips-page',
   template,

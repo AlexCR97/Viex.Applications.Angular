@@ -8,7 +8,6 @@
   "peerDependencies": {
     "@angular/common": "^12.1.0",
     "@angular/core": "^12.1.0",
-    "@popperjs/core": "^2.10.2",
     "@types/bootstrap": "^5.1.6",
     "bootstrap": "^5.1.1",
     "bootstrap-icons": "^1.5.0",

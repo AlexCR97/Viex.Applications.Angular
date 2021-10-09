@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { ButtonsPageComponent } from './pages/ButtonsPage/buttons-page.component';
 import { CardsPageComponent } from './pages/CardsPage/cards-page.component';
 import { MenusPageComponent } from './pages/MenusPage/menus-page.component';
+import { NotificationsPageComponent } from './pages/NotificationsPage/notifications-page.component';
 import { TooltipsPageComponent } from './pages/TooltipsPage/tooltips.component';
 
 const routes: Routes = [
@@ -17,6 +18,10 @@ const routes: Routes = [
   {
     path: 'menus',
     component: MenusPageComponent,
+  },
+  {
+    path: 'notifications',
+    component: NotificationsPageComponent,
   },
   {
     path: 'tooltips',

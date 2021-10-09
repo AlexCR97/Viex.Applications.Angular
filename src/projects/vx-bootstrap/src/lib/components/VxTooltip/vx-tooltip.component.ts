@@ -38,9 +38,7 @@ export class VxTooltipComponent implements AfterViewInit {
   constructor() { }
   
   ngAfterViewInit(): void {
-    console.log("ngAfterViewInit", this.tooltipId);
     const popoverElement = document.getElementById(this.tooltipId)
-    console.log("popoverElement:", popoverElement);
 
     if (!popoverElement)
       throw 'Could not initialize VxTooltip because no Bootstrap Popover element was found.'
