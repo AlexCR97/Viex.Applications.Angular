@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild, ViewContainerRef } from '@angular/core';
 import { StaticRoutes } from './app-routing.routes';
 
 const template = /*html*/`
@@ -17,6 +17,10 @@ const template = /*html*/`
   <router-outlet></router-outlet>
 
 </div>
+
+<div id="vxNotificationsContainer">
+  <ng-template #vxNotificationsViewContainerRef></ng-template>
+</div>
 `
 
 @Component({
@@ -24,6 +28,9 @@ const template = /*html*/`
   template,
 })
 export class AppComponent {
+
+  @ViewChild('vxNotificationsViewContainerRef', { read: ViewContainerRef })
+  vxNotificationsViewContainerRef!: ViewContainerRef;
 
   routes = [
     StaticRoutes.buttons,

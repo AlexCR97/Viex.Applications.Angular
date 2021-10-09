@@ -1,11 +1,11 @@
 import { AfterViewInit, Component, Input, OnInit } from '@angular/core';
 import { Toast } from 'bootstrap';
-import { VxColorVariant } from '../../types';
+import { VxColorVariant, VxFixedPosition } from '../../types';
 import random from '../../utils/random';
 
 const template = /*html*/`
 <div
-  [id]="vxNotificationId"
+  [id]="_vxNotificationId"
   class="toast vx-notification"
   [ngClass]="vxNotificationClass"
   [ngStyle]="vxNotificationStyle"
@@ -47,12 +47,14 @@ export class VxNotificationComponent implements AfterViewInit {
   @Input() delay = 3000
   @Input() width = '350px'
   
-  vxNotificationId = random.newGuid()
+  _vxNotificationId = random.newGuid()
 
   constructor() { }
 
   ngAfterViewInit(): void {
-    const toastElement = document.getElementById(this.vxNotificationId)
+    console.log("ngAfterViewInit");
+
+    const toastElement = document.getElementById(this._vxNotificationId)
 
     if (!toastElement)
       throw 'Could not initialize VxNotification because a Bootstrap Toast element was not found'
@@ -70,7 +72,7 @@ export class VxNotificationComponent implements AfterViewInit {
 
     if (this.color)
       classes.push(`bg-${this.color}`)
-    
+
     return classes
   }
 

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { VxNotificationComponent } from 'projects/vx-bootstrap/src/lib/components/VxNotification/vx-notification.component';
 import { VxNotificationService } from 'projects/vx-bootstrap/src/lib/components/VxNotification/vx-notification.service';
 import { VxColorVariant } from 'projects/vx-bootstrap/src/lib/types';
 
@@ -38,10 +39,10 @@ const template = /*html*/`
         <vx-notification>This is a normal sized notification (<b>350px</b>)</vx-notification>
         <div class="mb-3"></div>
         
-        <vx-notification width="450px">This notification was a width of <b>450px</b></vx-notification>
+        <vx-notification width="450px">This notification has a width of <b>450px</b></vx-notification>
         <div class="mb-3"></div>
 
-        <vx-notification width="100%">This notification was a width of <b>100%</b></vx-notification>
+        <vx-notification width="100%">This notification has a width of <b>100%</b></vx-notification>
       </div>
     </vx-card>
   </div>
@@ -74,7 +75,11 @@ export class NotificationsPageComponent implements OnInit {
   }
 
   onShowNotificationClicked() {
-    this.vxNotifications.show()
+    this.vxNotifications.show({
+      autohide: true,
+      color: 'success',
+      contentMessage: 'This notification was shown programatically!',
+    })
   }
 
 }
