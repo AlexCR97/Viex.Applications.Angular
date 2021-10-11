@@ -68,10 +68,19 @@ const template = /*html*/`
   <div class="mb-5">
     <h6>Notification Positions</h6>
     <vx-card>
-    <div body class="pt-3 ps-3">
+      <div body class="pt-3 ps-3">
         <div *ngFor="let item of fixedPositions" class="mb-3">
           <vx-button [label]="item" [outlined]="true" variant="secondary" (clicked)="onShowPositionedNotificationClicked(item)"></vx-button>
         </div>
+      </div>
+    </vx-card>
+  </div>
+
+  <div class="mb-5">
+    <h6>Notification with HTML content</h6>
+    <vx-card>
+      <div body class="pt-3 ps-3">
+        <vx-button label="Show Notification with HTML content" [outlined]="true" variant="secondary" (clicked)="onShowHtmlContentNotificationClicked()"></vx-button>
       </div>
     </vx-card>
   </div>
@@ -110,6 +119,20 @@ export class NotificationsPageComponent implements OnInit {
       delay: 1000,
       contentMessage: `This notification has a position of ${position}`,
       position: position,
+    })
+  }
+
+  onShowHtmlContentNotificationClicked() {
+    this.vxNotifications.show({
+      color: 'dark',
+      position: 'topCenter',
+      contentHtml: /*html*/`
+        <div>
+          <h1>Hello World!</h1>
+          <p>This notification has <b>HTML</b> content</p>
+          <p class="m-0">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore, porro eveniet consectetur aut non distinctio at odio ex cum qui accusamus recusandae, enim tenetur doloremque mollitia, neque provident ad maiores!</p>
+        </div>
+      `,
     })
   }
 

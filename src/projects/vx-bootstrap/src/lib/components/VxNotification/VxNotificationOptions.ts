@@ -9,6 +9,7 @@ export interface VxNotificationOptions {
 
     // Content projection options
     contentMessage?: string
+    contentHtml?: string
     // TODO Add support for template reference
     // TODO Add support for component class reference
 }

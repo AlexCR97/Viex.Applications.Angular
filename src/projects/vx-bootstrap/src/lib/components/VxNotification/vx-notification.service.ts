@@ -26,8 +26,14 @@ export class VxNotificationService {
       const html = /*html*/`<p class="m-0">${options.contentMessage}</p>`
       const messageElement = htmlToElement(html)
       componentRef = vxNotificationsViewContainerRef.createComponent(factory, 0, undefined, [[ messageElement ]])
-    } else {
-      throw `Programatic VxNotificationComponent has not been implemented for options ${options}`
+    }
+    else if (options.contentHtml) {
+      const element = htmlToElement(options.contentHtml)
+      componentRef = vxNotificationsViewContainerRef.createComponent(factory, 0, undefined, [[ element ]])
+    }
+    else {
+      const optionsJson = JSON.stringify(options)
+      throw `Programatic VxNotificationComponent has not been implemented for options ${optionsJson}`
     }
 
     this.setOptions(componentRef.instance, options)
