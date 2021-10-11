@@ -10,6 +10,7 @@ import { VxIconButtonComponent } from './components/VxIconButton/vx-icon-button.
 import { VxTooltipComponent } from './components/VxTooltip/vx-tooltip.component';
 import { VxNotificationComponent } from './components/VxNotification/vx-notification.component';
 import { VxNotificationService } from './components/VxNotification/vx-notification.service';
+import { VxDrawerComponent } from './components/VxDrawer/vx-drawer.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { VxNotificationService } from './components/VxNotification/vx-notificati
     VxIconButtonComponent,
     VxTooltipComponent,
     VxNotificationComponent,
+    VxDrawerComponent,
   ],
   imports: [
     BrowserModule,
@@ -36,6 +38,7 @@ import { VxNotificationService } from './components/VxNotification/vx-notificati
     VxIconButtonComponent,
     VxTooltipComponent,
     VxNotificationComponent,
+    VxDrawerComponent,
   ],
   providers: [
     VxNotificationService,

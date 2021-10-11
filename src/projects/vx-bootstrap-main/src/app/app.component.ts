@@ -35,6 +35,7 @@ export class AppComponent {
   routes = [
     StaticRoutes.buttons,
     StaticRoutes.cards,
+    StaticRoutes.drawers,
     StaticRoutes.menus,
     StaticRoutes.notifications,
     StaticRoutes.tooltips,
