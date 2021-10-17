@@ -10,7 +10,7 @@ export type VxColorVariant =
 
 export type VxButtonVariant = VxColorVariant | 'link'
 
-export type VxComponentSize = 'sm' | 'md' | 'lg'
+export type VxComponentSize = 'sm' | 'md' | 'lg' | 'xl' | 'xxl'
 
 export type VxHorizontalPlacement = 'start' | 'end'
 

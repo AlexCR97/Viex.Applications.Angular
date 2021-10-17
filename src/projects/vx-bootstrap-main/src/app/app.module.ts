@@ -10,6 +10,7 @@ import { MenusPageComponent } from './pages/MenusPage/menus-page.component';
 import { TooltipsPageComponent } from './pages/TooltipsPage/tooltips.component';
 import { NotificationsPageComponent } from './pages/NotificationsPage/notifications-page.component';
 import { DrawersPageComponent } from './pages/DrawersPage/drawers-page.component';
+import { ModalsPageComponent } from './pages/ModalsPage/modals-page.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { DrawersPageComponent } from './pages/DrawersPage/drawers-page.component
     TooltipsPageComponent,
     NotificationsPageComponent,
     DrawersPageComponent,
+    ModalsPageComponent,
   ],
   imports: [
     BrowserModule,

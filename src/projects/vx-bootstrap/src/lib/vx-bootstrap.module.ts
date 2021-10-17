@@ -11,6 +11,7 @@ import { VxTooltipComponent } from './components/VxTooltip/vx-tooltip.component'
 import { VxNotificationComponent } from './components/VxNotification/vx-notification.component';
 import { VxNotificationService } from './components/VxNotification/vx-notification.service';
 import { VxDrawerComponent } from './components/VxDrawer/vx-drawer.component';
+import { VxModalComponent } from './components/VxModal/vx-modal.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { VxDrawerComponent } from './components/VxDrawer/vx-drawer.component';
     VxTooltipComponent,
     VxNotificationComponent,
     VxDrawerComponent,
+    VxModalComponent,
   ],
   imports: [
     BrowserModule,
@@ -39,6 +41,7 @@ import { VxDrawerComponent } from './components/VxDrawer/vx-drawer.component';
     VxTooltipComponent,
     VxNotificationComponent,
     VxDrawerComponent,
+    VxModalComponent,
   ],
   providers: [
     VxNotificationService,

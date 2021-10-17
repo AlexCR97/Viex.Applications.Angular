@@ -1,5 +1,5 @@
 import { Component, ViewChild, ViewContainerRef } from '@angular/core';
-import { StaticRoutes } from './app-routing.routes';
+import { StaticRoutes, StaticRoutesPaths } from './app-routing.routes';
 
 const template = /*html*/`
 <div class="container my-5">
@@ -30,15 +30,8 @@ const template = /*html*/`
 export class AppComponent {
 
   @ViewChild('vxNotificationsViewContainerRef', { read: ViewContainerRef })
-  vxNotificationsViewContainerRef!: ViewContainerRef;
+  vxNotificationsViewContainerRef!: ViewContainerRef
 
-  routes = [
-    StaticRoutes.buttons,
-    StaticRoutes.cards,
-    StaticRoutes.drawers,
-    StaticRoutes.menus,
-    StaticRoutes.notifications,
-    StaticRoutes.tooltips,
-  ]
+  routes = StaticRoutesPaths
 
 }

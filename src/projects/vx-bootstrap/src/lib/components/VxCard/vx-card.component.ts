@@ -1,5 +1,6 @@
 import { AfterViewInit, Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
 import { VxComponentSize } from '../../types';
+import { hasInnerContent } from '../../utils/angular';
 
 const template = /*html*/`
 <div class="card" [ngClass]="cardClass">
@@ -28,13 +29,13 @@ const template = /*html*/`
 export class VxCardComponent implements OnInit {
 
   @ViewChild('headerContainer', { static: true })
-  headerContainer!: ElementRef<HTMLDivElement>;
+  headerContainer!: ElementRef<HTMLDivElement>
 
   @ViewChild('bodyContainer', { static: true })
-  bodyContainer!: ElementRef<HTMLDivElement>;
+  bodyContainer!: ElementRef<HTMLDivElement>
 
   @ViewChild('footerContainer', { static: true })
-  footerContainer!: ElementRef<HTMLDivElement>;
+  footerContainer!: ElementRef<HTMLDivElement>
 
   @Input() shadow: VxComponentSize | undefined
 
@@ -56,8 +57,7 @@ export class VxCardComponent implements OnInit {
   }
   
   get cardHeaderClass() {
-    const hasContent = this.hasInnerContent(this.headerContainer)
-    
+    const hasContent = hasInnerContent(this.headerContainer)
     return {
       'card-header': hasContent,
       'd-none': !hasContent,
@@ -65,8 +65,7 @@ export class VxCardComponent implements OnInit {
   }
 
   get cardBodyClass() {
-    const hasContent = this.hasInnerContent(this.bodyContainer)
-
+    const hasContent = hasInnerContent(this.bodyContainer)
     return {
       'card-body': hasContent,
       'd-none': !hasContent,
@@ -74,17 +73,10 @@ export class VxCardComponent implements OnInit {
   }
 
   get cardFooterClass() {
-    const hasContent = this.hasInnerContent(this.footerContainer)
-
+    const hasContent = hasInnerContent(this.footerContainer)
     return {
       'card-footer': hasContent,
       'd-none': !hasContent,
     }
   }
-  
-  private hasInnerContent(ref: ElementRef) {
-    const element = ref.nativeElement
-    return element.hasChildNodes() || element.innerHTML.trim().length > 0
-  }
-
 }
