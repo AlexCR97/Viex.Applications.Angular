@@ -6,7 +6,7 @@
     "gc:vxb": "ng generate component --flat --inline-style --inline-template --skip-tests --project=vx-bootstrap",
     "gs:vxb": "ng generate service --flat --skip-tests --project=vx-bootstrap",
     "serve:vx-bootstrap": "ng serve vx-bootstrap-main",
-    "watch:vx-bootstrap": "ng build vx-bootstrap"
+    "build-prod:vx-bootstrap": "ng build vx-bootstrap --prod"
   },
   "private": true,
   "dependencies": {

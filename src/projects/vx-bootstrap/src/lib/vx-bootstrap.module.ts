@@ -12,8 +12,13 @@ import { VxNotificationComponent } from './components/VxNotification/vx-notifica
 import { VxNotificationService } from './components/VxNotification/vx-notification.service';
 import { VxDrawerComponent } from './components/VxDrawer/vx-drawer.component';
 import { VxModalComponent } from './components/VxModal/vx-modal.component';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
+  imports: [
+    BrowserModule,
+    CommonModule,
+  ],
   declarations: [
     VxButtonComponent,
     VxIconComponent,
@@ -27,15 +32,12 @@ import { VxModalComponent } from './components/VxModal/vx-modal.component';
     VxDrawerComponent,
     VxModalComponent,
   ],
-  imports: [
-    BrowserModule,
-  ],
   exports: [
     VxButtonComponent,
-    VxCardComponent,
     VxIconComponent,
     VxSpinnerComponent,
     VxFlexComponent,
+    VxCardComponent,
     VxMenuComponent,
     VxIconButtonComponent,
     VxTooltipComponent,

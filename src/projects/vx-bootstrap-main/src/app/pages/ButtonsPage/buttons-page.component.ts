@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { VxButtonVariant } from 'projects/vx-bootstrap/src/lib/types';
+import { VxButtonVariant } from 'dist/vx-bootstrap/lib/types';
 
 const template = /*html*/`
 <div class="container">

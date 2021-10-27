@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { VxModalFullscreen } from 'projects/vx-bootstrap/src/lib/components/VxModal/VxModal.types';
-import { VxComponentSize } from 'projects/vx-bootstrap/src/lib/types';
+import { VxModalFullscreen } from 'dist/vx-bootstrap/lib/components/VxModal/VxModal.types';
+import { VxComponentSize } from 'dist/vx-bootstrap/lib/types';
 
 const template = /*html*/`
 <div class="container pb-5">

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { VxMenuItem } from 'projects/vx-bootstrap/src/lib/components/VxMenu/VxMenuItem';
-import { VxButtonVariant } from 'projects/vx-bootstrap/src/lib/types';
+import { VxMenuItem } from 'dist/vx-bootstrap/lib/components/VxMenu/VxMenuItem';
+import { VxButtonVariant } from 'dist/vx-bootstrap/lib/types';
 
 const template = /*html*/`
 <div class="container pb-5">

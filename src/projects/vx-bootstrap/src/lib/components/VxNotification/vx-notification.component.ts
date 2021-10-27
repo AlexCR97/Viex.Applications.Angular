@@ -1,6 +1,6 @@
-import { AfterViewInit, Component, Input, OnInit } from '@angular/core';
+import { AfterViewInit, Component, Input } from '@angular/core';
 import { Toast } from 'bootstrap';
-import { VxColorVariant, VxFixedPosition } from '../../types';
+import { VxColorVariant } from '../../types';
 import random from '../../utils/random';
 
 const template = /*html*/`

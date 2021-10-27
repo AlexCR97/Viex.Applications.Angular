@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { VxDrawerBackdrop, VxDrawerPlacement } from 'projects/vx-bootstrap/src/lib/components/VxDrawer/VxDrawer.types';
+import { VxDrawerBackdrop, VxDrawerPlacement } from 'dist/vx-bootstrap/lib/components/VxDrawer/VxDrawer.types';
 
 const template = /*html*/`
 <div class="container pb-5">

@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { VxNotificationComponent } from 'projects/vx-bootstrap/src/lib/components/VxNotification/vx-notification.component';
-import { VxNotificationService } from 'projects/vx-bootstrap/src/lib/components/VxNotification/vx-notification.service';
-import { VxColorVariant, VxFixedPosition } from 'projects/vx-bootstrap/src/lib/types';
+import { VxColorVariant, VxFixedPosition } from 'dist/vx-bootstrap/lib/types';
+import { VxNotificationService } from 'vx-bootstrap';
 
 const template = /*html*/`
 <div class="container pb-5">
