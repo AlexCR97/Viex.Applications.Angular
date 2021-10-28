@@ -13,6 +13,7 @@ import { VxNotificationService } from './components/VxNotification/vx-notificati
 import { VxDrawerComponent } from './components/VxDrawer/vx-drawer.component';
 import { VxModalComponent } from './components/VxModal/vx-modal.component';
 import { CommonModule } from '@angular/common';
+import { VxActionDrawerComponent } from './components/VxActionDrawer/vx-action-drawer.component';
 
 @NgModule({
   imports: [
@@ -31,6 +32,7 @@ import { CommonModule } from '@angular/common';
     VxNotificationComponent,
     VxDrawerComponent,
     VxModalComponent,
+    VxActionDrawerComponent,
   ],
   exports: [
     VxButtonComponent,
@@ -44,6 +46,7 @@ import { CommonModule } from '@angular/common';
     VxNotificationComponent,
     VxDrawerComponent,
     VxModalComponent,
+    VxActionDrawerComponent,
   ],
   providers: [
     VxNotificationService,

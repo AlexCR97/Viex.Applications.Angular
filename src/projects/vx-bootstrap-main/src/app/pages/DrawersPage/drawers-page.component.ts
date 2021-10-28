@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { VxActionDrawerItem } from 'dist/vx-bootstrap/lib/components/VxActionDrawer/VxActionDrawerItem';
 import { VxDrawerBackdrop, VxDrawerPlacement } from 'dist/vx-bootstrap/lib/components/VxDrawer/VxDrawer.types';
 
 const template = /*html*/`
@@ -63,21 +64,20 @@ const template = /*html*/`
     </vx-card>
   </div>
 
-  <br><br><br><br><br><br><br>
-  <br><br><br><br><br><br><br>
-  <br><br><br><br><br><br><br>
-  <br><br><br><br><br><br><br>
-  <br><br><br><br><br><br><br>
-  <br><br><br><br><br><br><br>
-  <br><br><br><br><br><br><br>
-  <br><br><br><br><br><br><br>
-  <br><br><br><br><br><br><br>
-  <br><br><br><br><br><br><br>
-  <br><br><br><br><br><br><br>
-  <br><br><br><br><br><br><br>
-  <br><br><br><br><br><br><br>
-  <br><br><br><br><br><br><br>
-  <br><br><br><br><br><br><br>
+  <h2>Action Drawers</h2>
+  <hr>
+  <div class="mb-5"></div>
+
+  <div class="mb-5">
+    <h6>Simple action drawer</h6>
+    <vx-card>
+      <div body>
+        <vx-action-drawer [actions]="simpleActionDrawerItems" placement="bottom">
+          <vx-button label="Click here to open a simple Action Drawer" [outlined]="true" variant="secondary"></vx-button>
+        </vx-action-drawer>
+      </div>
+    </vx-card>
+  </div>
 
 </div>
 `
@@ -90,6 +90,17 @@ export class DrawersPageComponent implements OnInit {
 
   drawerPlacements: VxDrawerPlacement[] = [ 'bottom', 'end', 'start', 'top' ]
   drawerBackdrops: VxDrawerBackdrop[] = [ 'none', 'scroll', 'static' ]
+  simpleActionDrawerItems: VxActionDrawerItem[] = [
+    {
+      label: 'Action 1',
+    },
+    {
+      label: 'Action 2',
+    },
+    {
+      label: 'Action 3',
+    },
+  ]
 
   constructor() { }
 

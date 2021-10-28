@@ -1,7 +1,4 @@
-/*
- * Public API Surface of vx-bootstrap
- */
-
+export * from './lib/components/VxActionDrawer/vx-action-drawer.component'
 export * from './lib/components/VxButton/vx-button.component'
 export * from './lib/components/VxCard/vx-card.component'
 export * from './lib/components/VxDrawer/vx-drawer.component'
